@@ -53,7 +53,7 @@ const InlineForm = ({ todayDate, timeZone }) => {
         Note: e.target.elements.Note.value
       };
 
-      fetch('http://localhost:3001/formData', {
+      fetch('https://swap-app-rtxy.onrender.com/formData', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(formData)
