@@ -9,7 +9,7 @@ const DayBox = ({ selectedDay }) => {
     const [search, setSearch] = useState('');
 
     useEffect(() => {
-        fetch(`https://swap-app-rtxy.onrender.com/formData/${date}`, {
+        fetch(`https://swap-app-server.onrender.com/formData/${date}`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
         })
