@@ -12,7 +12,7 @@ const DayBox = ({ selectedDay }) => {
     useEffect(() => {
         setLoading(true);
 
-        fetch(`http://localhost:3001/formData/${date}`, {
+        fetch(`https://swap-app-server.onrender.com/formData/${date}`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
         })
