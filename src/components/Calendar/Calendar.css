@@ -26,7 +26,6 @@
 .calendar-day:active {
   background-color: rgb(150, 150, 255);
 }
-
 .calendar-day-selected {
   background-color: rgb(200, 200, 255);
   color: white;
