@@ -1,6 +1,5 @@
 # Swap App December 8th 2023 Update
 
-- Server.js retrieve ONLY {Email, Date, Outbound, Inbound} last Sent Unique combination
 - Daybox.js sorts data from last Sent descending order
 - Added 'Swap Form' & 'Roster' link button
 - Refined Smartphone responsiveness
