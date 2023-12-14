@@ -60,7 +60,7 @@ const InlineForm = () => {
         Note: e.target.elements.Note.value
       };
 
-      fetch('http://localhost:3001/formData', {
+      fetch('https://swap-app-server.onrender.com/formData', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(formData)
