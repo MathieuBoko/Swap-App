@@ -9,7 +9,7 @@ const QuickViewBox = () => {
     useEffect(() => {
         setLoading(true);
 
-        fetch('http://localhost:3001/allFormData', {
+        fetch('https://swap-app-server.onrender.com/allFormData', {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
