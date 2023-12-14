@@ -27,7 +27,7 @@ const Calendar = () => {
   const [daysWithData, setDaysWithData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/daysWithData')
+    fetch('https://swap-app-server.onrender.com/daysWithData')
       .then(response => response.json())
       .then(data => setDaysWithData(data.daysWithData))
       .catch(error => console.error('Error fetching days with data:', error));
