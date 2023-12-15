@@ -69,7 +69,7 @@ const Calendar = () => {
                   }}
                 >
                   {format(day, 'd')}
-                  <div className={`${daysWithData.includes(format(day, 'MM/dd/yyyy') || format(day, 'M/d/yyyy') ||  format(day, 'M/dd/yyyy') || format(day, 'MM/d/yyyy')) === true ? 'dot' : ''}`}></div>
+                  <div className={`${daysWithData.includes({day}) === true ? 'dot' : ''}`}></div>
                 </div>
               ))}
             </div>
