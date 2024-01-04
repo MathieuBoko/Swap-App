@@ -2,8 +2,10 @@
 
 Back-end: https://github.com/MathDevWeb/swap-app-server/tree/5.01.2024
 
--
--
+- Added Week days to Calendar.js
+- Form Submission triggers 'QuickView'
+- Added InlineForm.js <div> for tutorial / caption purpose
+- Addressed users behaviour on form submission: in Daybox.js & QuickViewBox.js, when Outbound value = Inbound value, displays 'See Note'
 
 <div>
     <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/b829f94e-19da-494c-84cf-d5adee4048d6" height= 200 />
