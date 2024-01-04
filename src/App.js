@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   const todayDate = new Date();
-  const BASEURL = "http://localhost:3001";
+  const BASEURL = "https://swap-app-server.onrender.com";
 
   const [shifts, setShifts] = useState([{isOvernight: false, Date: '', Outbound: '', Inbound: '', Position:'', Early: false, Late: false, LTA: false, DO: false}]);
 
