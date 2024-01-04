@@ -5,9 +5,9 @@ Back-end: https://github.com/MathDevWeb/swap-app-server/tree/5.01.2024
 - Refactored & lifted functions to Parent component
 - Added ${BASEURL} to ease Maintenance & Updates
 - Fixed Dates format
-  
+  <hr>
 - Added Week days to Calendar.js
-- Added InlineForm.js <div> for tutorial / caption purpose
+- Added InlineForm.js 'div' for tutorial / caption purpose
 - Form Submission now triggers 'QuickView'
 - Addressed users behaviour on form submission: in Daybox.js & QuickViewBox.js, when Outbound value = Inbound value, displays 'See Note'
 
