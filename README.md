@@ -2,7 +2,7 @@
 
 Back-end: https://github.com/MathDevWeb/swap-app-server/tree/5.01.2024
 
-- Refactored & lifted functions to Parent component
+- Refactored & lifted functions to Parent components
 - Added ${BASEURL} to ease Maintenance & Updates
 - Fixed Dates format
   <hr>
