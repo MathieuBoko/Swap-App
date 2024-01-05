@@ -1,6 +1,8 @@
+# Swap App January 5th 2024 Update b
 
+Back-end: https://github.com/MathDevWeb/swap-app-server/tree/5.01.2024a
 
-- 5.01.2024a > Update 3b
+- UI update: CSS Grid & adjustements
 
   <div>
     <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/e0599b80-870d-44ae-84c2-198a2cffc625" height= 200 />
