@@ -43,6 +43,7 @@ function App() {
   const [showQuickView, setShowQuickView] = useState(false);
   const handleQuickViewClick = () => {
     setShowQuickView(!showQuickView);
+    setSelectedDay(false)
   };
 
   const handleSubmit = (e) => {
