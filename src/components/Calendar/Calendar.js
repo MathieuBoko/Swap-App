@@ -18,7 +18,6 @@ const Calendar = ({ BASEURL, isOutdated, showQuickView, handleQuickViewClick }) 
   const [selectedDay, setSelectedDay] = useState(null);
   const toggleSelectedDay = (day) => { 
     setSelectedDay(prevSelectedDay => (prevSelectedDay && prevSelectedDay.getTime() === day.getTime() ? null : day));
-    setShowQuickView(false)
   };
 
   // Fetch Days with Data
