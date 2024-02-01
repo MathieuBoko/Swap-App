@@ -4,6 +4,7 @@ Back-end: https://github.com/MathDevWeb/swap-app-server/tree/5.01.2024
 
 - UI : SCSS / SASS implementation for maintanability & scalability
 - Refactoring JSX: moved most functions & some States to parent component
+- Reworked rendering logic /w .map() over a "categories" array for maintanability & scalability
 - Updated Database connection credentials to align /w IPV6 requirements (on host side)
 - Added a Tutorial video link as per Users feedback
 
