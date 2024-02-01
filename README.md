@@ -1,38 +1,13 @@
-# Swap App
+# Swap App February 2nd 2024 Update
 
-Branches:
+Back-end: https://github.com/MathDevWeb/swap-app-server/tree/5.01.2024
 
-- 5.01.2024 > Update 3b
-
-  <div>
-    <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/e0599b80-870d-44ae-84c2-198a2cffc625" height= 200 />
-    <span><img src="https://github.com/MathDevWeb/swap-app/assets/140265706/06dbcd90-e1fa-4a85-9266-e044e05e0f3b" height= 200 /></span>
-  </div>
-
-- 5.01.2024 > Update 3
+- UI : SCSS / SASS implementation for maintanability & scalability
+- Refactoring JSX: moved most functions & some States to parent component
+- Updated Database connection credentials to align /w IPV6 requirements (on host side)
+- Added a Tutorial video link as per Users feedback
 
   <div>
-    <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/b829f94e-19da-494c-84cf-d5adee4048d6" height= 200 />
-    <span><img src="https://github.com/MathDevWeb/swap-app/assets/140265706/29df45e9-e021-4c92-a23f-db6356595070" height= 200 /></span>
-  </div>
-  
-- 15.12.2023 > Update 2
-  
-  <div>
-    <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/4e450fe7-1575-4129-8e9f-9a6ea5ddeefc" height= 200 />
-    <span><img src="https://github.com/MathDevWeb/swap-app/assets/140265706/1544d601-16ee-4d55-9325-b9800a17d006" height= 200 /></span>
-  </div>
-
-- 8.12.2023  > Update 1
-  
-  <div>
-    <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/4e30391f-eeb1-4886-b078-ddeb3ab71ffa" height= 200 />
-    <span><img src="https://github.com/MathDevWeb/swap-app/assets/140265706/5c05f820-f179-4ed1-82a2-8e1f4cb12152" height= 200 /></span>
-  </div>
-  
-- 1.12.2023  > First prototype
-  
-  <div>
-    <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/a00d4b80-da4a-41ba-ba0b-cf1e2ccfcaec" height= 200 />
-    <span><img src="https://github.com/MathDevWeb/swap-app/assets/140265706/791c2f49-b5f9-4609-adda-e7c5670fe4d0" height= 200 /></span>
+    <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/cc08d0be-3667-4fc2-adcf-fbc75527f38a" height= 200 />
+    <span><img src="https://github.com/MathDevWeb/swap-app/assets/140265706/a9872bd6-ef1f-44c0-9d3f-6cc57d477999" height= 200 /></span>
   </div>
