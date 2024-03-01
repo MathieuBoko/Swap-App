@@ -10,7 +10,7 @@ import './App.scss';
 export default function App() {
 
   const todayDate = new Date();
-  const BASEURL = "http://localhost:3001";
+  const BASEURL = "https://swap-app-server.onrender.com";
 
   const categories = [
     {
