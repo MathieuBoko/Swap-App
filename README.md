@@ -3,9 +3,7 @@
 Back-end: https://github.com/MathDevWeb/swap-app-server/tree/2.02.2024
 
 - 'Last Update' button
-- Copyright
-- Version
-- Started working on new formData inputs implementation
+- Copyright & Version
 
 <div>
     <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/4aa4feab-27c6-4dd0-8b82-2756903b3dcb" height= 200 />
