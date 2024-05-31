@@ -8,7 +8,7 @@ export default function Version({ todayDate }){
     return(
         <>
             <div> © 2023 - {currentYear} </div>
-            <div style={{fontSize: '8px'}}> V1.03.2024 </div>
+            <div style={{fontSize: '8px'}}> V1.06.2024 </div>
         </>
     )
 }
