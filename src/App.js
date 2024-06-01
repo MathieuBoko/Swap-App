@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import InlineForm from './components/InlineForm/InlineForm.js';
+import Loader from "components/Loader.js";
 import Calendar from './components/Calendar.js';
 import Greetings from "./components/Greetings.js";
 import Version from "./components/Version.js";
