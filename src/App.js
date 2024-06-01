@@ -39,18 +39,21 @@ export default function App() {
         BASEURL={BASEURL}
         isOutdated={isOutdated}
       />
-      <Calendar 
-        todayDate={todayDate} 
-        swapData={swapData} 
-        daysWithData={daysWithData} 
-        daySwapData={daySwapData} 
-        isOutdated={isOutdated} 
-        showQuickView={showQuickView} 
-        showDayBox={showDayBox} 
-        toggleQuickViewBox={toggleQuickViewBox} 
-        selectedDay={selectedDay} 
-        toggleDayBox={toggleDayBox} 
-      />
+      { !swapData ?
+        <Loader /> :
+        <Calendar 
+          todayDate={todayDate} 
+          swapData={swapData} 
+          daysWithData={daysWithData} 
+          daySwapData={daySwapData} 
+          isOutdated={isOutdated} 
+          showQuickView={showQuickView} 
+          showDayBox={showDayBox} 
+          toggleQuickViewBox={toggleQuickViewBox} 
+          selectedDay={selectedDay} 
+          toggleDayBox={toggleDayBox} 
+        />
+      }
       <Version 
         todayDate={todayDate}
       />
