@@ -1,5 +1,5 @@
 
-export const BASEURL = "http://localhost:3001";
+export const BASEURL = "https://swap-app-server.onrender.com";
 
 export const todayDate = new Date();
 
