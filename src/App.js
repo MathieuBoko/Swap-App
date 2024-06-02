@@ -12,7 +12,7 @@ import './styles/App.scss';
 
 export default function App() {
 
-  const { swapData, daysWithData, daySwapData, getDaySwapData } = useGetSwapData(BASEURL);
+  const { loading, swapData, daysWithData, daySwapData, getDaySwapData } = useGetSwapData(BASEURL);
 
   const [showQuickView, setShowQuickView] = useState(false);
   const [showDayBox, setShowDayBox] = useState(false);
@@ -40,7 +40,7 @@ export default function App() {
         BASEURL={BASEURL}
         isOutdated={isOutdated}
       />
-      { !swapData ?
+      { loading ?
         <Loader /> :
         <Calendar 
           todayDate={todayDate} 
