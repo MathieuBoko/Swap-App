@@ -50,6 +50,7 @@ export default function InlineForm ({ BASEURL, isOutdated }) {
           type="email" 
           placeholder="Email"  
           style={{marginBottom: '4px'}} 
+          required
         />
         <div className="overflow">
           <table>
