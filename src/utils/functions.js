@@ -1,5 +1,5 @@
 
-export const BASEURL = process.env.BASEURL;
+export const BASEURL = "https://swap-app-server.onrender.com";
 
 export const todayDate = new Date();
 
