@@ -8,7 +8,6 @@ import Loader from "components/Loader";
 import useGetSwapData from "hooks/useGetSwapData";
 import 'styles/App.scss';
 
-
 const App = () => {
 
   const BASEURL = "https://swap-app-server.onrender.com";
