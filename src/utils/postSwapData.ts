@@ -1,9 +1,9 @@
 import { toast } from "react-toastify";
-import { shiftsItem } from "types";
+import { swapDataItem } from "types";
 
 const postSwapData = ({ BASEURL, shifts, event }: {
   BASEURL: string,
-  shifts: shiftsItem[],
+  shifts: swapDataItem[],
   event: React.BaseSyntheticEvent<HTMLInputElement> | React.FormEvent<HTMLFormElement>
 }) => {
 
