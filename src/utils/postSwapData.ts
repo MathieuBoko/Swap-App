@@ -4,12 +4,14 @@ import { swapDataItem } from "types";
 const postSwapData = ({ BASEURL, shifts, event }: {
   BASEURL: string,
   shifts: swapDataItem[],
-  event: React.BaseSyntheticEvent<HTMLInputElement> | React.FormEvent<HTMLFormElement>
+  event: React.FormEvent<HTMLFormElement>
 }) => {
 
   shifts.forEach(shift => {
+    const emailInput = event.currentTarget.elements.namedItem("Email") as HTMLInputElement;
+
     const formData = {
-      Email: event.target.elements.Email.value,
+      Email: emailInput.value,
       Date: shift.Date,
       Outbound: shift.Outbound,
       Inbound: shift.isOvernight ? shift.Inbound + '+1d' : shift.Inbound,
@@ -27,24 +29,16 @@ const postSwapData = ({ BASEURL, shifts, event }: {
       body: JSON.stringify(formData)
     })
       .then(response => {
-        if (!response.ok) {
-          throw new Error('Form submission failed');
-        }
-        return response.json()
-      })
-      .then(data => {
-        console.log('Success', data);
-
-        if (shift.Position === "AV" || shift.Position === "Platform") { toast.success(`${shift.Position} on ${shift.Date} submitted successfully!`) }
+        if (["AV", "Platform"].includes(shift.Position as string)) { toast.success(`${shift.Position} on ${shift.Date} submitted successfully!`) }
         else { toast.success(`${shift.Outbound} - ${shift.Inbound} on ${shift.Date} submitted successfully!`) }
 
-        setTimeout(function () { window.location.reload() }, 5000);
+        if (response.ok) setTimeout(function () { window.location.reload() }, 5000);
       })
       .catch(error => {
-        console.log(error);
-
-        if (shift.Position === "AV" || shift.Position === "Platform") { toast.error(`${shift.Position} on ${shift.Date} submission failed`) }
+        if (["AV", "Platform"].includes(shift.Position as string)) { toast.error(`${shift.Position} on ${shift.Date} submission failed`) }
         else { toast.error(`${shift.Outbound} - ${shift.Inbound} on ${shift.Date} submission failed`) }
+
+        throw new Error(error)
       });
   });
 };

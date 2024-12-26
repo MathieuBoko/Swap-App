@@ -1,4 +1,12 @@
 import postSwapData from 'utils/postSwapData';
+import { toast } from 'react-toastify';
+
+jest.mock('react-toastify', () => ({
+  toast: {
+    success: jest.fn(),
+    error: jest.fn(),
+  },
+}));
 
 describe('postSwapData.ts', () => {
 
@@ -28,7 +36,18 @@ describe('postSwapData.ts', () => {
     }
   ];
 
-  const event = { target: { elements: { Email: { value: 'test@example.com' } } } };
+  const event = {
+    currentTarget: {
+      elements: {
+        namedItem: (name) => {
+          if (name === "Email") {
+            return { value: "test@example.com" };
+          }
+          return null;
+        },
+      },
+    },
+  };
 
   it('Should post expected data', () => {
     fetch.mockResolvedValueOnce({
@@ -57,8 +76,18 @@ describe('postSwapData.ts', () => {
   });
 
   describe('When submission is successful', () => {
-    it('Should display Toast.success', () => {
-      //TO DO
+    it('Should display Toast.success', async () => {
+      fetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ data: '12345' }),
+      });
+
+      postSwapData({ BASEURL, shifts, event });
+
+      await Promise.resolve();
+      expect(toast.success).toHaveBeenCalledWith(
+        '9036 - 9063 on 08-14-2024 submitted successfully!'
+      );
     });
 
     it('Should reload the page after 5 sec', () => {
@@ -74,9 +103,9 @@ describe('postSwapData.ts', () => {
     });
   });
 
-  describe('When submission is failed', () => {
+  describe('When submission fails', () => {
     it('Should display Toast.error', () => {
-      //TO DO
+      //TODO
     });
   });
 });
