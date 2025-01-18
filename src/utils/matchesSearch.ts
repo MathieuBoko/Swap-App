@@ -1,6 +1,6 @@
 
 const matchesSearch = ({ dataItem, search }: {
-  dataItem: any, // To debug
+  dataItem: any,
   search: string
 }) => {
 

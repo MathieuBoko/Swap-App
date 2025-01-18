@@ -1,8 +1,8 @@
-import { shiftsItem } from "types";
+import { swapDataItem } from "types";
 
 type ChangeHandlers = {
-    shifts: shiftsItem[];
-    handleChange: (index: number, fieldName: keyof shiftsItem, fieldValue: string | boolean) => void;
+    shifts: swapDataItem[];
+    handleChange: (index: number, fieldName: keyof swapDataItem, fieldValue: string | boolean) => void;
     addShift: () => void;
     deleteShift: (index: number) => void;
     ovSwitch: (index: number) => void;

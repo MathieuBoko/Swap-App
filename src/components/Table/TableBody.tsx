@@ -8,6 +8,8 @@ const TableBody = ({ swapData, search }: {
 
     const filteredSwapData = swapData.filter(dataItem => matchesSearch({ dataItem, search }));
 
+    console.log(swapData)
+
     return (
         <>
             <tbody>

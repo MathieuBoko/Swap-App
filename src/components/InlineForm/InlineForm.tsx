@@ -5,7 +5,7 @@ import InlineFormBody from "./InlineFormBody";
 import LinkedButtons from "./LinkedButtons";
 import postSwapData from "utils/postSwapData";
 import isOutdated from "utils/isOutdated";
-import { shiftsItem } from "types";
+import { swapDataItem } from "types";
 import 'styles/InlineForm.scss';
 
 const InlineForm = ({ BASEURL, todayDate }: {
@@ -13,7 +13,7 @@ const InlineForm = ({ BASEURL, todayDate }: {
   todayDate: Date
 }) => {
 
-  const [shifts, setShifts] = useState<shiftsItem[]>(
+  const [shifts, setShifts] = useState<swapDataItem[]>(
     [
       {
         isOvernight: false,
@@ -29,7 +29,7 @@ const InlineForm = ({ BASEURL, todayDate }: {
     ]
   );
 
-  const handleChange = (index: number, fieldName: keyof shiftsItem, fieldValue: string | boolean) => {
+  const handleChange = (index: number, fieldName: keyof swapDataItem, fieldValue: string | boolean) => {
     const updatedShifts: any = [...shifts];
     updatedShifts[index][fieldName] = fieldValue;
     setShifts(updatedShifts);
