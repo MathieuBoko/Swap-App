@@ -11,8 +11,6 @@ import 'styles/App.scss';
 
 const App = () => {
 
-  const trying = "trying";
-
   const BASEURL = "https://swap-app-server.onrender.com";
 
   const todayDate = new Date();
