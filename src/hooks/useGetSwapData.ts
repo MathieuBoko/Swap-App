@@ -19,10 +19,10 @@ const useGetSwapData = (BASEURL: string) => {
         }
         return response.json();
       })
-      .then((data) => {
-        const daysWithData = data?.data?.map((item: swapDataItem) => item.Date);
+      .then(({ data }) => {
+        const daysWithData = data?.map((item: swapDataItem) => item.Date);
         setDaysWithData(daysWithData);
-        setSwapData(data?.data);
+        setSwapData(data);
         setLoading(false);
       })
       .catch((error) => {

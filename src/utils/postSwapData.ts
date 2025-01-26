@@ -38,7 +38,7 @@ const postSwapData = ({
         return response.json();
       })
       .then((data) => {
-        if (shift.Position === "AV" || shift.Position === "Platform") {
+        if (["AV", "Platform"].includes(shift.Position as string)) {
           toast.success(
             `${shift.Position} on ${shift.Date} submitted successfully!`
           );
@@ -53,7 +53,7 @@ const postSwapData = ({
         }, 5000);
       })
       .catch((error) => {
-        if (shift.Position === "AV" || shift.Position === "Platform") {
+        if (["AV", "Platform"].includes(shift.Position as string)) {
           toast.error(`${shift.Position} on ${shift.Date} submission failed`);
         } else {
           toast.error(
