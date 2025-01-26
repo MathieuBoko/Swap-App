@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "src/styles/App.scss";
 @use "src/styles/InlineForm.scss";
 
@@ -35,7 +36,7 @@
   }
 
   &:active {
-    background-color: darken(App.$Primary-color, 5%)
+    background-color: color.adjust(App.$Primary-color, $lightness: -5%)
   }
 }
 

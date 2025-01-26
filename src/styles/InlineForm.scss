@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "src/styles/App.scss";
 
 .linked-button-grid {
@@ -7,13 +8,13 @@
 }
 
 .submit-button {
-  @include App.buttonStyle($theme: darken(App.$Primary-color, 25%), $width: 115px)
+  @include App.buttonStyle($theme: color.adjust(App.$Primary-color, $lightness: -25%), $width: 115px)
 }
 
 .swap-form-button,
 .roster-button,
 .tutorial-button {
-  @include App.buttonStyle($theme: darken(App.$Primary-color, 25%), $width: auto)
+  @include App.buttonStyle($theme: color.adjust(App.$Primary-color, $lightness: -25%), $width: auto)
 }
 
 .hidden {

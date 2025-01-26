@@ -1,3 +1,4 @@
+@use "sass:color";
 $Primary-color: rgb(200, 200, 255);
 
 @mixin fadeIn () {
@@ -13,7 +14,7 @@ $Primary-color: rgb(200, 200, 255);
   margin: 3px;
   border-radius: 3px;
   padding: 5px;
-  border: darken($theme, 10%) 0.5px solid;
+  border: color.adjust($theme, $lightness: -10%) 0.5px solid;
   text-decoration: none;
   text-align: center;
   justify-content: center;
@@ -22,11 +23,11 @@ $Primary-color: rgb(200, 200, 255);
   cursor: pointer;
 
   &:hover {
-    background-color: lighten($theme, 6%)
+    background-color: color.adjust($theme, $lightness: 6%)
   }
 
   &:active {
-    background-color: darken($theme, 6%)
+    background-color: color.adjust($theme, $lightness: -6%)
   }
 }
 
@@ -39,7 +40,7 @@ html {
 }
 
 body {
-  background-color: lighten($Primary-color, 8%);
+  background-color: color.adjust($Primary-color, $lightness: 8%);
   border-radius: 5px;
   padding: 4px;
 }
@@ -73,15 +74,15 @@ table {
   width: 100%;
   height: fit-content;
   border-collapse: collapse;
-  background-color: lighten($Primary-color, 12%);
+  background-color: color.adjust($Primary-color, $lightness: 12%);
 
   tr {
     &:hover {
-      background-color: lighten($Primary-color, 9%)
+      background-color: color.adjust($Primary-color, $lightness: 9%)
     }
 
     th {
-      background-color: lighten($Primary-color, 12%);
+      background-color: color.adjust($Primary-color, $lightness: 12%);
       position: sticky;
       top: 0;
       z-index: 1;
@@ -104,7 +105,7 @@ table {
 }
 
 .FOR {
-  background-color: lighten($Primary-color, 6%)
+  background-color: color.adjust($Primary-color, $lightness: 6%)
 }
 
 .newsButton {
