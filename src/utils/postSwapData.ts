@@ -33,7 +33,6 @@ const postSwapData = ({ BASEURL, shifts, event }: {
         return response.json()
       })
       .then(data => {
-        console.log('Success', data);
 
         if (shift.Position === "AV" || shift.Position === "Platform") { toast.success(`${shift.Position} on ${shift.Date} submitted successfully!`) }
         else { toast.success(`${shift.Outbound} - ${shift.Inbound} on ${shift.Date} submitted successfully!`) }
@@ -41,7 +40,6 @@ const postSwapData = ({ BASEURL, shifts, event }: {
         setTimeout(function () { window.location.reload() }, 5000);
       })
       .catch(error => {
-        console.log(error);
 
         if (shift.Position === "AV" || shift.Position === "Platform") { toast.error(`${shift.Position} on ${shift.Date} submission failed`) }
         else { toast.error(`${shift.Outbound} - ${shift.Inbound} on ${shift.Date} submission failed`) }
