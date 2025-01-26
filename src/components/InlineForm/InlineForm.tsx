@@ -6,30 +6,34 @@ import LinkedButtons from "./LinkedButtons";
 import postSwapData from "utils/postSwapData";
 import isOutdated from "utils/isOutdated";
 import { swapDataItem } from "types";
-import 'styles/InlineForm.scss';
+import "styles/InlineForm.scss";
 
-const InlineForm = ({ BASEURL, todayDate }: {
-  BASEURL: string,
-  todayDate: Date
+const InlineForm = ({
+  BASEURL,
+  todayDate,
+}: {
+  BASEURL: string;
+  todayDate: Date;
 }) => {
+  const [shifts, setShifts] = useState<swapDataItem[]>([
+    {
+      isOvernight: false,
+      Date: "",
+      Outbound: undefined,
+      Inbound: undefined,
+      Position: "",
+      Early: false,
+      Late: false,
+      LTA: false,
+      DO: false,
+    },
+  ]);
 
-  const [shifts, setShifts] = useState<swapDataItem[]>(
-    [
-      {
-        isOvernight: false,
-        Date: '',
-        Outbound: undefined,
-        Inbound: undefined,
-        Position: '',
-        Early: false,
-        Late: false,
-        LTA: false,
-        DO: false
-      }
-    ]
-  );
-
-  const handleChange = (index: number, fieldName: keyof swapDataItem, fieldValue: string | boolean) => {
+  const handleChange = (
+    index: number,
+    fieldName: keyof swapDataItem,
+    fieldValue: string | boolean
+  ) => {
     const updatedShifts: any = [...shifts];
     updatedShifts[index][fieldName] = fieldValue;
     setShifts(updatedShifts);
@@ -40,17 +44,17 @@ const InlineForm = ({ BASEURL, todayDate }: {
       ...shifts,
       {
         isOvernight: false,
-        Date: '',
-        Outbound: '',
-        Inbound: '',
-        Position: '',
+        Date: "",
+        Outbound: "",
+        Inbound: "",
+        Position: "",
         Early: false,
         Late: false,
         LTA: false,
-        DO: false
-      }
+        DO: false,
+      },
     ];
-    setShifts(newShifts)
+    setShifts(newShifts);
   };
 
   const deleteShift = (index: number) => {
@@ -62,15 +66,17 @@ const InlineForm = ({ BASEURL, todayDate }: {
   const ovSwitch = (index: number) => {
     const updatedShifts = [...shifts];
     updatedShifts[index].isOvernight = !updatedShifts[index].isOvernight;
-    setShifts(updatedShifts)
+    setShifts(updatedShifts);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const isAnyOutdated = shifts.some(shift => shift.Date && isOutdated(todayDate, new Date(shift.Date)));
+    const isAnyOutdated = shifts.some(
+      (shift) => shift.Date && isOutdated(todayDate, new Date(shift.Date))
+    );
 
-    isAnyOutdated ?
-      toast.error('Oops... You can\'t submit an outdated swap 🤓')
+    isAnyOutdated
+      ? toast.error("Oops... You can't submit an outdated swap 🤓")
       : postSwapData({ BASEURL, shifts, event });
   };
 
@@ -82,25 +88,30 @@ const InlineForm = ({ BASEURL, todayDate }: {
             name="Email"
             type="email"
             placeholder="Email"
-            style={{ marginBottom: '4px' }}
+            style={{ marginBottom: "4px" }}
           />
           <div className="overflow">
             <table>
               <InlineFormHead />
               <InlineFormBody
-                changeHandlers={{ shifts, handleChange, addShift, deleteShift, ovSwitch }}
+                changeHandlers={{
+                  shifts,
+                  handleChange,
+                  addShift,
+                  deleteShift,
+                  ovSwitch,
+                }}
               />
             </table>
           </div>
-          <button
-            className="submit-button"
-            type="submit"
-          >Submit</button>
+          <button className="submit-button" type="submit">
+            Submit
+          </button>
         </form>
         <LinkedButtons />
       </div>
     </>
-  )
+  );
 };
 
 export default InlineForm;

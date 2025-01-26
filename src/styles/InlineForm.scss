@@ -8,13 +8,19 @@
 }
 
 .submit-button {
-  @include App.buttonStyle($theme: color.adjust(App.$Primary-color, $lightness: -25%), $width: 115px)
+  @include App.buttonStyle(
+    $theme: color.adjust(App.$Primary-color, $lightness: -25%),
+    $width: 115px
+  );
 }
 
 .swap-form-button,
 .roster-button,
 .tutorial-button {
-  @include App.buttonStyle($theme: color.adjust(App.$Primary-color, $lightness: -25%), $width: auto)
+  @include App.buttonStyle(
+    $theme: color.adjust(App.$Primary-color, $lightness: -25%),
+    $width: auto
+  );
 }
 
 .hidden {
@@ -23,9 +29,7 @@
 
 .add-line {
   height: 16px;
-  background:
-    linear-gradient(#fff 0 0),
-    linear-gradient(#fff 0 0);
+  background: linear-gradient(#fff 0 0), linear-gradient(#fff 0 0);
   background-position: center;
   background-size: 70% 3px, 3px 70%;
   background-repeat: no-repeat;
@@ -73,10 +77,10 @@
   }
 
   &:checked {
-    background-color: rgb(0, 115, 236)
+    background-color: rgb(0, 115, 236);
   }
 
   &:checked:before {
-    left: 24px
+    left: 24px;
   }
 }

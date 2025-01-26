@@ -1,7 +1,6 @@
-import postSwapData from 'utils/postSwapData';
+import postSwapData from "utils/postSwapData";
 
-describe('postSwapData.ts', () => {
-
+describe("postSwapData.ts", () => {
   delete window.location;
   window.location = { reload: jest.fn() };
 
@@ -11,60 +10,62 @@ describe('postSwapData.ts', () => {
     jest.useFakeTimers();
   });
 
-  const BASEURL = 'http://example.com';
+  const BASEURL = "http://example.com";
 
   const shifts = [
     {
-      Date: '08-14-2024',
+      Date: "08-14-2024",
       Outbound: 9036,
       Inbound: 9063,
-      Position: 'BAR',
+      Position: "BAR",
       Early: true,
       Late: false,
       LTA: false,
       DO: false,
-      Note: 'Test shift',
-      isOvernight: false
-    }
+      Note: "Test shift",
+      isOvernight: false,
+    },
   ];
 
-  const event = { target: { elements: { Email: { value: 'test@example.com' } } } };
+  const event = {
+    target: { elements: { Email: { value: "test@example.com" } } },
+  };
 
-  it('Should post expected data', () => {
+  it("Should post expected data", () => {
     fetch.mockResolvedValueOnce({
       ok: true,
-      json: () => ({ data: '12345' })
+      json: () => ({ data: "12345" }),
     });
 
     postSwapData({ BASEURL, shifts, event });
 
     expect(fetch).toHaveBeenCalledWith(`${BASEURL}/formData`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        Email: 'test@example.com',
-        Date: '08-14-2024',
+        Email: "test@example.com",
+        Date: "08-14-2024",
         Outbound: 9036,
         Inbound: 9063,
-        Position: 'BAR',
+        Position: "BAR",
         Early: true,
         Late: false,
         LTA: false,
         DO: false,
-        Note: 'Test shift'
-      })
+        Note: "Test shift",
+      }),
     });
   });
 
-  describe('When submission is successful', () => {
-    it('Should display Toast.success', () => {
+  describe("When submission is successful", () => {
+    it("Should display Toast.success", () => {
       //TO DO
     });
 
-    it('Should reload the page after 5 sec', () => {
+    it("Should reload the page after 5 sec", () => {
       fetch.mockResolvedValueOnce({
         ok: true,
-        json: async () => ({ data: '12345' })
+        json: async () => ({ data: "12345" }),
       });
 
       postSwapData({ BASEURL, shifts, event });
@@ -74,8 +75,8 @@ describe('postSwapData.ts', () => {
     });
   });
 
-  describe('When submission is failed', () => {
-    it('Should display Toast.error', () => {
+  describe("When submission is failed", () => {
+    it("Should display Toast.error", () => {
       //TO DO
     });
   });

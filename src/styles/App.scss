@@ -1,14 +1,14 @@
 @use "sass:color";
 $Primary-color: rgb(200, 200, 255);
 
-@mixin fadeIn () {
+@mixin fadeIn() {
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
 }
 
-@mixin buttonStyle ($theme, $width) {
+@mixin buttonStyle($theme, $width) {
   background-color: $theme;
   width: $width;
   margin: 3px;
@@ -23,11 +23,11 @@ $Primary-color: rgb(200, 200, 255);
   cursor: pointer;
 
   &:hover {
-    background-color: color.adjust($theme, $lightness: 6%)
+    background-color: color.adjust($theme, $lightness: 6%);
   }
 
   &:active {
-    background-color: color.adjust($theme, $lightness: -6%)
+    background-color: color.adjust($theme, $lightness: -6%);
   }
 }
 
@@ -62,11 +62,11 @@ input {
   border-radius: 5px;
 
   &:hover {
-    background-color: rgb(220, 250, 255)
+    background-color: rgb(220, 250, 255);
   }
 
   &:focus {
-    background-color: rgb(220, 250, 255)
+    background-color: rgb(220, 250, 255);
   }
 }
 
@@ -78,7 +78,7 @@ table {
 
   tr {
     &:hover {
-      background-color: color.adjust($Primary-color, $lightness: 9%)
+      background-color: color.adjust($Primary-color, $lightness: 9%);
     }
 
     th {
@@ -105,7 +105,7 @@ table {
 }
 
 .FOR {
-  background-color: color.adjust($Primary-color, $lightness: 6%)
+  background-color: color.adjust($Primary-color, $lightness: 6%);
 }
 
 .newsButton {
@@ -114,40 +114,39 @@ table {
 
 @keyframes fadeInOpacity {
   0% {
-    opacity: 0
+    opacity: 0;
   }
 
   100% {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes rotate {
   0% {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
 
   100% {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 
 @keyframes flickerAnimation {
   0% {
-    opacity: 1
+    opacity: 1;
   }
 
   50% {
-    opacity: 0
+    opacity: 0;
   }
 
   100% {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @media screen and (max-width: 600px) {
-
   html,
   body,
   table,

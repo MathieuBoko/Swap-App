@@ -1,26 +1,39 @@
-
-const matchesSearch = ({ dataItem, search }: {
-  dataItem: any,
-  search: string
+const matchesSearch = ({
+  dataItem,
+  search,
+}: {
+  dataItem: any;
+  search: string;
 }) => {
-
-  const searchField = ["Date", "Outbound", "Inbound", "Position", "Early", "Late", "LTA", "DO", "Email", "Sent"];
+  const searchField = [
+    "Date",
+    "Outbound",
+    "Inbound",
+    "Position",
+    "Early",
+    "Late",
+    "LTA",
+    "DO",
+    "Email",
+    "Sent",
+  ];
 
   if (!search) {
-    return true
-  };
+    return true;
+  }
 
   if (search === "Early" || search === "early") {
-    return dataItem["Early"] === true
-  };
+    return dataItem["Early"] === true;
+  }
 
   if (search === "Late" || search === "late") {
-    return dataItem["Late"] === true
-  };
+    return dataItem["Late"] === true;
+  }
 
-  return searchField.some(field =>
-    dataItem[field] &&
-    dataItem[field].toString().toLowerCase().includes(search.toLowerCase())
+  return searchField.some(
+    (field) =>
+      dataItem[field] &&
+      dataItem[field].toString().toLowerCase().includes(search.toLowerCase())
   );
 };
 

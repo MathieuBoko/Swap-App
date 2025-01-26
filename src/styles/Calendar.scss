@@ -32,11 +32,11 @@
   cursor: pointer;
 
   &:hover {
-    background-color: App.$Primary-color
+    background-color: App.$Primary-color;
   }
 
   &:active {
-    background-color: color.adjust(App.$Primary-color, $lightness: -5%)
+    background-color: color.adjust(App.$Primary-color, $lightness: -5%);
   }
 }
 

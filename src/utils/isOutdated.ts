@@ -1,8 +1,7 @@
-
 const isOutdated = (todayDate: Date, day: Date) => {
-    todayDate.setHours(0, 0, 0, 0);
+  todayDate.setHours(0, 0, 0, 0);
 
-    return day < todayDate;
+  return day < todayDate;
 };
 
 export default isOutdated;
