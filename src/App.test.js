@@ -30,19 +30,19 @@ describe('App.js', () => {
         return render(<App />);
     };
 
-    it('Should display Greetings', () => {
+    it('Should render Greetings', () => {
         const { container } = renderApp();
         const greetings = container.querySelector('.greetings');
         expect(greetings).toBeInTheDocument();
     });
 
-    it('Should display InlineForm', () => {
+    it('Should render InlineForm', () => {
         const { container } = renderApp();
         const inlineForm = container.querySelector('.inlineForm');
         expect(inlineForm).toBeInTheDocument();
     });
 
-    it('Should display Version', () => {
+    it('Should render Version', () => {
         const { container } = renderApp();
         const version = container.querySelector('.version');
         expect(version).toBeInTheDocument();
