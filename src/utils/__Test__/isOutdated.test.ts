@@ -1,4 +1,4 @@
-import isOutdated from "utils/isOutdated";
+import { isOutdated } from "utils/isOutdated";
 
 describe("isOutdated.js", () => {
   describe("When Day < Today Date", () => {

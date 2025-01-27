@@ -1,4 +1,4 @@
-const matchesSearch = ({
+export const matchesSearch = ({
   dataItem,
   search,
 }: {
@@ -36,5 +36,3 @@ const matchesSearch = ({
       dataItem[field].toString().toLowerCase().includes(search.toLowerCase())
   );
 };
-
-export default matchesSearch;

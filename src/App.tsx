@@ -9,7 +9,7 @@ import useGetSwapData from "hooks/useGetSwapData";
 import "styles/App.scss";
 
 const App = () => {
-  const BASEURL = "https://swap-app-server.onrender.com";
+  const BASEURL = process.env.REACT_APP_SWAP_APP_URL || "";
 
   const todayDate = new Date();
 

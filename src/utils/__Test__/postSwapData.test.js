@@ -1,4 +1,4 @@
-import postSwapData from "utils/postSwapData";
+import { postSwapData } from "utils/postSwapData";
 
 describe("postSwapData.ts", () => {
   delete window.location;

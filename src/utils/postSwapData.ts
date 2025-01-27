@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 import { swapDataItem } from "types";
 
-const postSwapData = ({
+export const postSwapData = ({
   BASEURL,
   shifts,
   event,
@@ -63,5 +63,3 @@ const postSwapData = ({
       });
   });
 };
-
-export default postSwapData;

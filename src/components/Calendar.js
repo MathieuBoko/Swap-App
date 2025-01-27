@@ -8,7 +8,7 @@ import {
   isSameMonth,
 } from "date-fns";
 import ViewBox from "./ViewBox";
-import isOutdated from "utils/isOutdated";
+import { isOutdated } from "utils/isOutdated";
 import "styles/Calendar.scss";
 
 const Calendar = ({

@@ -1,4 +1,4 @@
-import matchesSearch from "utils/matchesSearch";
+import { matchesSearch } from "utils/matchesSearch";
 import { swapDataItem } from "types";
 
 const TableBody = ({
