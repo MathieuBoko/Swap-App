@@ -23,8 +23,9 @@ const InlineFormBody: React.FC<InlineFormBodyProps> = ({ changeHandlers }) => {
   return (
     <>
       {shifts.map((shift, index) => {
-        const hideInputs =
-          shift.Position === "AV" || shift.Position === "Platform";
+        const hideInputs = ["AV", "Platform"].includes(
+          shift.Position as string
+        );
 
         return (
           <tbody key={index}>
