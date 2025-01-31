@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import InlineFormHead from "./InlineFormHead";
+import { tableSchema } from "constants/tableSchema";
+import TableHead from "components/Table/TableHead";
 import InlineFormBody from "./InlineFormBody";
 import LinkedButtons from "./LinkedButtons";
 import { postSwapData } from "utils/postSwapData";
@@ -92,7 +93,7 @@ const InlineForm = ({
           />
           <div className="overflow">
             <table>
-              <InlineFormHead />
+              <TableHead columns={tableSchema.InlineForm.head} />
               <InlineFormBody
                 changeHandlers={{
                   shifts,

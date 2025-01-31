@@ -1,21 +1,18 @@
 import React from "react";
 
-const TableHead: React.FC = () => {
+interface TableHeadProps {
+  columns: { name: string; className?: string }[];
+}
+
+const TableHead: React.FC<TableHeadProps> = ({ columns }) => {
   return (
     <thead>
       <tr>
-        <th>Date</th>
-        <th>Outbound</th>
-        <th>Inbound</th>
-        <th>Position</th>
-        <th>Email</th>
-        <th className="FOR">FOR:</th>
-        <th className="FOR">Early</th>
-        <th className="FOR">Late</th>
-        <th className="FOR">LTA</th>
-        <th className="FOR">DO</th>
-        <th className="FOR">Note</th>
-        <th>Sent</th>
+        {columns.map(({ name, className }) => (
+          <th key={name} className={className || ""}>
+            {name}
+          </th>
+        ))}
       </tr>
     </thead>
   );
