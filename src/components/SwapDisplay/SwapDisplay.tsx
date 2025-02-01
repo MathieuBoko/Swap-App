@@ -2,11 +2,11 @@ import { useState } from "react";
 import { swapDataItem } from "types";
 import { tableSchema } from "constants/tableSchema";
 import TableHead from "components/Table/TableHead";
-import TableBody from "./DisplayBody";
+import SwapDisplayBody from "./SwapDisplayBody";
 import SearchBox from "./SearchBox";
 import "styles/ViewBoxes.scss";
 
-const Display = ({ swapData }: { swapData: swapDataItem[] }) => {
+const SwapDisplay = ({ swapData }: { swapData: swapDataItem[] }) => {
   const [search, setSearch] = useState("");
 
   return (
@@ -14,12 +14,12 @@ const Display = ({ swapData }: { swapData: swapDataItem[] }) => {
       <SearchBox search={search} setSearch={setSearch} />
       <div className="overflow">
         <table>
-          <TableHead columns={tableSchema.Display.head} />
-          <TableBody swapData={swapData} search={search} />
+          <TableHead columns={tableSchema.SwapDisplay.head} />
+          <SwapDisplayBody swapData={swapData} search={search} />
         </table>
       </div>
     </>
   );
 };
 
-export default Display;
+export default SwapDisplay;

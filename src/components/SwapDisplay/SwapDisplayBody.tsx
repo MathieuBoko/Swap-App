@@ -1,7 +1,7 @@
 import { matchesSearch } from "utils/matchesSearch";
 import { swapDataItem } from "types";
 
-const TableBody = ({
+const SwapDisplayBody = ({
   swapData,
   search,
 }: {
@@ -75,4 +75,4 @@ const TableBody = ({
   );
 };
 
-export default TableBody;
+export default SwapDisplayBody;
