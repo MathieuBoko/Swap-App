@@ -1,10 +1,10 @@
-import { swapDataItem } from "types";
+import { SwapDataItem } from "types";
 
 type ChangeHandlers = {
-  shifts: swapDataItem[];
+  shifts: SwapDataItem[];
   handleChange: (
     index: number,
-    fieldName: keyof swapDataItem,
+    fieldName: keyof SwapDataItem,
     fieldValue: string | boolean
   ) => void;
   addShift: () => void;

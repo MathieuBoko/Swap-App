@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { tableSchema } from "constants/tableSchema";
-import TableHead from "components/Table/TableHead";
+import { TableHead } from "components/Table/TableHead";
 import InlineFormBody from "./InlineFormBody";
 import LinkedButtons from "./LinkedButtons";
 import { postSwapData } from "utils/postSwapData";
 import { isOutdated } from "utils/isOutdated";
-import { swapDataItem } from "types";
+import { SwapDataItem } from "types";
 import "styles/InlineForm.scss";
 
 const InlineForm = ({
@@ -16,7 +16,7 @@ const InlineForm = ({
   BASEURL: string;
   todayDate: Date;
 }) => {
-  const [shifts, setShifts] = useState<swapDataItem[]>([
+  const [shifts, setShifts] = useState<SwapDataItem[]>([
     {
       isOvernight: false,
       Date: "",
@@ -32,7 +32,7 @@ const InlineForm = ({
 
   const handleChange = (
     index: number,
-    fieldName: keyof swapDataItem,
+    fieldName: keyof SwapDataItem,
     fieldValue: string | boolean
   ) => {
     const updatedShifts: any = [...shifts];
@@ -90,10 +90,15 @@ const InlineForm = ({
             type="email"
             placeholder="Email"
             style={{ marginBottom: "4px" }}
+            required
           />
           <div className="overflow">
             <table>
-              <TableHead columns={tableSchema.InlineForm.head} />
+              <TableHead
+                swapData={[]}
+                search={""}
+                schema={tableSchema.InlineForm.content}
+              />
               <InlineFormBody
                 changeHandlers={{
                   shifts,

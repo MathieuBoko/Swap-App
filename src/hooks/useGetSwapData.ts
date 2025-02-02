@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
-import { swapDataItem } from "types";
+import { SwapDataItem } from "types";
 
 const useGetSwapData = (BASEURL: string) => {
   const [loading, setLoading] = useState<boolean>(true);
-  const [swapData, setSwapData] = useState<swapDataItem[]>();
-  const [daysWithData, setDaysWithData] = useState<swapDataItem[]>();
-  const [daySwapData, setDaySwapData] = useState<swapDataItem[]>();
+  const [swapData, setSwapData] = useState<SwapDataItem[]>();
+  const [daysWithData, setDaysWithData] = useState<SwapDataItem[]>();
+  const [daySwapData, setDaySwapData] = useState<SwapDataItem[]>();
 
   useEffect(() => {
     fetch(`${BASEURL}/dbData`, {
@@ -20,7 +20,7 @@ const useGetSwapData = (BASEURL: string) => {
         return response.json();
       })
       .then(({ data }) => {
-        const daysWithData = data?.map((item: swapDataItem) => item.Date);
+        const daysWithData = data?.map((item: SwapDataItem) => item.Date);
         setDaysWithData(daysWithData);
         setSwapData(data);
         setLoading(false);
@@ -35,7 +35,7 @@ const useGetSwapData = (BASEURL: string) => {
       ? format(selectedDay, "dd/MM/yyyy")
       : null;
     const daySwapData = swapData?.filter(
-      (item: swapDataItem) => item.Date === formatedSelectedDay
+      (item: SwapDataItem) => item.Date === formatedSelectedDay
     );
     setDaySwapData(daySwapData);
   };
