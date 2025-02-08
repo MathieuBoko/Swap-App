@@ -28,7 +28,6 @@ Branches:
   <div>
     <img src="https://github.com/MathieuBoko/swap-app/assets/140265706/cc08d0be-3667-4fc2-adcf-fbc75527f38a" height= 200 />
     <span><img src="https://github.com/MathieuBoko/swap-app/assets/140265706/22cca0d0-ceeb-429e-a278-bb68d2591efd" height= 200 /></span>
-    <span><img src="https://github.com/MathieuBoko/swap-app/assets/140265706/8aa8b94d-bdc1-45af-a158-566f93c9589a" height= 200 /></span>
   </div>
 
 - 5.01.2024 > Update 3b: https://github.com/MathieuBoko/swap-app/tree/5.01.2024b
@@ -64,5 +63,4 @@ Branches:
   <div>
     <img src="https://github.com/MathDevWeb/swap-app/assets/140265706/a00d4b80-da4a-41ba-ba0b-cf1e2ccfcaec" height= 200 />
     <span><img src="https://github.com/MathDevWeb/swap-app/assets/140265706/791c2f49-b5f9-4609-adda-e7c5670fe4d0" height= 200 /></span>
-    <span><img src="https://github.com/MathDevWeb/swap-app/assets/140265706/eea8da62-c124-42d5-b7e3-87b3e9dff57d" height= 200 /></span>
   </div>
