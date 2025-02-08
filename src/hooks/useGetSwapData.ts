@@ -13,12 +13,7 @@ const useGetSwapData = (BASEURL: string) => {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch Calendar Data");
-        }
-        return response.json();
-      })
+      .then((response) => response.json())
       .then(({ data }) => {
         const daysWithData = data?.map((item: SwapDataItem) => item.Date);
         setDaysWithData(daysWithData);
@@ -26,14 +21,12 @@ const useGetSwapData = (BASEURL: string) => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching calendar data:", error);
+        throw new Error("Failed to fetch Calendar Data:", error);
       });
   }, [BASEURL]);
 
   const getDaySwapData = (selectedDay: Date) => {
-    const formatedSelectedDay = selectedDay
-      ? format(selectedDay, "dd/MM/yyyy")
-      : null;
+    const formatedSelectedDay = format(selectedDay, "dd/MM/yyyy");
     const daySwapData = swapData?.filter(
       (item: SwapDataItem) => item.Date === formatedSelectedDay
     );
