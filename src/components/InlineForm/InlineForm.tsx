@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { tableSchema } from "constants/tableSchema";
 import { TableHead } from "components/Table/TableHead";
 import InlineFormBody from "./InlineFormBody";
-import LinkedButtons from "./LinkedButtons";
+import { LinkedButtons } from "./LinkedButtons";
 import { postSwapData } from "utils/postSwapData";
 import { isOutdated } from "utils/isOutdated";
 import { SwapDataItem } from "types";
@@ -97,7 +97,7 @@ const InlineForm = ({
               <TableHead
                 swapData={[]}
                 search={""}
-                schema={tableSchema.InlineForm.content}
+                schema={tableSchema.InlineForm.tableContent}
               />
               <InlineFormBody
                 changeHandlers={{

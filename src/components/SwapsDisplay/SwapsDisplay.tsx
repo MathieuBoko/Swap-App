@@ -7,7 +7,7 @@ import "styles/ViewBoxes.scss";
 
 const SwapsDisplay = ({ swapData }: { swapData: SwapDataItem[] }) => {
   const [search, setSearch] = useState("");
-  const schema = tableSchema.SwapDisplay.content;
+  const schema = tableSchema.SwapDisplay.tableContent;
 
   return (
     <>

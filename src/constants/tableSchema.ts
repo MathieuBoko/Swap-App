@@ -1,6 +1,6 @@
 export const tableSchema = {
   InlineForm: {
-    content: [
+    tableContent: [
       { name: "SHIFT" },
       { name: "AV" },
       { name: "Platform" },
@@ -18,9 +18,26 @@ export const tableSchema = {
       { name: "DO", className: "FOR" },
       { name: "Note", className: "FOR" },
     ],
+    buttons: [
+      {
+        label: "Swap Form",
+        url: "https://app.smartsheet.com/b/form/20d18963576e477bafcbf102df2aec3d",
+        className: "swap-form-button",
+      },
+      {
+        label: "Roster",
+        url: "https://www.momentumserviceslondon.com/activite",
+        className: "roster-button",
+      },
+      {
+        label: "Tutorial",
+        url: "https://youtu.be/lGQ-xiyTrCk",
+        className: "tutorial-button",
+      },
+    ],
   },
   SwapDisplay: {
-    content: [
+    tableContent: [
       { name: "Date" },
       { name: "Outbound" },
       { name: "Inbound" },
