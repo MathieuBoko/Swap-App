@@ -1,8 +1,8 @@
 import { SwapDataItem } from "types";
-import SwapDisplay from "./SwapsDisplay/SwapsDisplay";
+import { SwapsDisplay } from "./SwapsDisplay/SwapsDisplay";
 import "styles/ViewBoxes.scss";
 
-const ViewBox = ({
+export const ViewBox = ({
   swapData,
   selectedDay,
   daySwapData,
@@ -15,15 +15,13 @@ const ViewBox = ({
     <>
       {selectedDay !== null ? (
         <div className="viewbox daybox">
-          <SwapDisplay swapData={daySwapData} />
+          <SwapsDisplay swapData={daySwapData} />
         </div>
       ) : (
         <div className="viewBox">
-          <SwapDisplay swapData={swapData} />
+          <SwapsDisplay swapData={swapData} />
         </div>
       )}
     </>
   );
 };
-
-export default ViewBox;

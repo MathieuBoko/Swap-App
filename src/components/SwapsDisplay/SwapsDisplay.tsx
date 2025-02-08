@@ -5,7 +5,7 @@ import { Table } from "components/Table/Table";
 import SearchBox from "./SearchBox";
 import "styles/ViewBoxes.scss";
 
-const SwapsDisplay = ({ swapData }: { swapData: SwapDataItem[] }) => {
+export const SwapsDisplay = ({ swapData }: { swapData: SwapDataItem[] }) => {
   const [search, setSearch] = useState("");
   const schema = tableSchema.SwapDisplay.tableContent;
 
@@ -16,5 +16,3 @@ const SwapsDisplay = ({ swapData }: { swapData: SwapDataItem[] }) => {
     </>
   );
 };
-
-export default SwapsDisplay;
