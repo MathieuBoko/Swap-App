@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import App from "App";
+import App from "containers/App";
 import useGetSwapData from "hooks/useGetSwapData";
 
 jest.mock("hooks/useGetSwapData");
