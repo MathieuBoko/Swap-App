@@ -53,10 +53,10 @@ describe("App.js", () => {
       expect(inlineForm).toBeInTheDocument();
     });
 
-    it("should render Version", () => {
+    it("should render Copyright", () => {
       const { container } = renderApp(mockLoadingState);
-      const version = container.querySelector(".version");
-      expect(version).toBeInTheDocument();
+      const copyright = container.querySelector(".copyright");
+      expect(copyright).toBeInTheDocument();
     });
   });
 
@@ -84,10 +84,10 @@ describe("App.js", () => {
       expect(inlineForm).toBeInTheDocument();
     });
 
-    it("should render Version", () => {
+    it("should render Copyright", () => {
       const { container } = renderApp(mockFetchedState);
-      const version = container.querySelector(".version");
-      expect(version).toBeInTheDocument();
+      const copyright = container.querySelector(".copyright");
+      expect(copyright).toBeInTheDocument();
     });
   });
 });

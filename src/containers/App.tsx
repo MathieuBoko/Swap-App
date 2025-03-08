@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 import InlineForm from "components/InlineForm/InlineForm";
 import { Calendar } from "components/Calendar";
 import Greetings from "components/Greetings";
-import Version from "components/Version";
+import { Copyright } from "components/Copyright";
 import Loader from "components/Loader";
 import useGetSwapData from "services/useGetSwapData";
 import "styles/App.scss";
@@ -31,7 +31,7 @@ const App = () => {
           getDaySwapData={getDaySwapData}
         />
       )}
-      <Version todayDate={todayDate} />
+      <Copyright todayDate={todayDate} />
       <ToastContainer />
     </>
   );
