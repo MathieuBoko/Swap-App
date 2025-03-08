@@ -31,7 +31,7 @@ describe("postSwapData.ts", () => {
     target: { elements: { Email: { value: "test@example.com" } } },
   };
 
-  it("Should post expected data", () => {
+  it("should post expected data", () => {
     fetch.mockResolvedValueOnce({
       ok: true,
       json: () => ({ data: "12345" }),
@@ -58,11 +58,11 @@ describe("postSwapData.ts", () => {
   });
 
   describe("When submission is successful", () => {
-    it("Should display Toast.success", () => {
+    it("should display Toast.success", () => {
       //TO DO
     });
 
-    it("Should reload the page after 5 sec", () => {
+    it("should reload the page after 5 sec", () => {
       fetch.mockResolvedValueOnce({
         ok: true,
         json: async () => ({ data: "12345" }),
@@ -75,8 +75,8 @@ describe("postSwapData.ts", () => {
     });
   });
 
-  describe("When submission is failed", () => {
-    it("Should display Toast.error", () => {
+  describe("When submission fails", () => {
+    it("should display Toast.error", () => {
       //TO DO
     });
   });
