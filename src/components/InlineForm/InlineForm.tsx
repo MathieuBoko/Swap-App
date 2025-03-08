@@ -4,7 +4,7 @@ import { tableSchema } from "constants/tableSchema";
 import { TableHead } from "components/Table/TableHead";
 import InlineFormBody from "./InlineFormBody";
 import { LinkedButtons } from "./LinkedButtons";
-import { postSwapData } from "utils/postSwapData";
+import { postSwapData } from "services/postSwapData";
 import { isOutdated } from "utils/isOutdated";
 import { SwapDataItem } from "types";
 import "styles/InlineForm.scss";

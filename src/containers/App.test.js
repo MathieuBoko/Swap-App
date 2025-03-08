@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
 import App from "containers/App";
-import useGetSwapData from "hooks/useGetSwapData";
+import useGetSwapData from "services/useGetSwapData";
 
-jest.mock("hooks/useGetSwapData");
+jest.mock("services/useGetSwapData");
 
 const mockLoadingState = {
   loading: true,
