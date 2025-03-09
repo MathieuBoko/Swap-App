@@ -35,7 +35,7 @@ $Primary-color: rgb(200, 200, 255);
 html {
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   @include fadeIn();
 }
@@ -153,7 +153,7 @@ table {
   table,
   input,
   .calendar {
-    font-size: 13px;
+    font-size: 15.5px;
   }
 
   .calendar-day {

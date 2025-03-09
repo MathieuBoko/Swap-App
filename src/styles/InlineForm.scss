@@ -8,6 +8,7 @@
 }
 
 .submit-button {
+  font-size: 16px;
   @include App.buttonStyle(
     $theme: color.adjust(App.$Primary-color, $lightness: -25%),
     $height: auto,
@@ -18,6 +19,7 @@
 .swap-form-button,
 .roster-button,
 .tutorial-button {
+  font-size: 16px;
   @include App.buttonStyle(
     $theme: color.adjust(App.$Primary-color, $lightness: -25%),
     $height: auto,

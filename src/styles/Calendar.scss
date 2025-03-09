@@ -4,7 +4,7 @@
 
 .calendar {
   justify-content: center;
-  font-size: 17px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -84,6 +84,7 @@
 }
 
 .overview-button {
+  font-size: 16px;
   @include App.buttonStyle(
     $theme: rgb(255, 0, 0),
     $height: auto,
