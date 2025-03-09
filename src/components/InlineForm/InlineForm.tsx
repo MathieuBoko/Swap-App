@@ -87,7 +87,7 @@ export const InlineForm = ({
             name="Email"
             type="email"
             placeholder="Email"
-            style={{ marginBottom: "4px" }}
+            className="email-input"
             required
           />
           <div className="overflow">
