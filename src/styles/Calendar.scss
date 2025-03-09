@@ -84,5 +84,9 @@
 }
 
 .overview-button {
-  @include App.buttonStyle($theme: rgb(255, 0, 0), $width: 115px);
+  @include App.buttonStyle(
+    $theme: rgb(255, 0, 0),
+    $height: auto,
+    $width: 115px
+  );
 }

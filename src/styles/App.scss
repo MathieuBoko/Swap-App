@@ -8,8 +8,9 @@ $Primary-color: rgb(200, 200, 255);
   animation-duration: 0.5s;
 }
 
-@mixin buttonStyle($theme, $width) {
+@mixin buttonStyle($theme, $height, $width) {
   background-color: $theme;
+  height: $height;
   width: $width;
   margin: 3px;
   border-radius: 3px;
@@ -109,7 +110,7 @@ table {
 }
 
 .newsButton {
-  @include buttonStyle($theme: rgb(255, 208, 0), $width: 115px);
+  @include buttonStyle($theme: rgb(255, 208, 0), $height: auto, $width: 115px);
 }
 
 @keyframes fadeInOpacity {

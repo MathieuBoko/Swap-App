@@ -33,10 +33,16 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
           <tbody key={index}>
             <tr>
               <td>
-                <button className="add-line" type="button" onClick={addShift} />
+                <button
+                  className="add-line"
+                  type="button"
+                  aria-label="Add-shift"
+                  onClick={addShift}
+                />
                 <button
                   className="delete-line"
                   type="button"
+                  aria-label="Delete-shift"
                   onClick={() => deleteShift(index)}
                 />
               </td>
@@ -45,6 +51,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                   name={`Position-${index}`}
                   type="radio"
                   value="AV"
+                  aria-label="Available-checkbox"
                   onChange={(e) => handleChange(index, "Position", "AV")}
                 ></input>
               </td>
@@ -53,6 +60,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                   name={`Position-${index}`}
                   type="radio"
                   value="Platform"
+                  aria-label="Platform-checkbox"
                   onChange={(e) => handleChange(index, "Position", "Platform")}
                 ></input>
               </td>
@@ -60,6 +68,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                 <input
                   type="date"
                   value={shift.Date}
+                  aria-label="Date-picker"
                   onChange={(e) => handleChange(index, "Date", e.target.value)}
                   required
                 ></input>
@@ -72,6 +81,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                   min="9000"
                   max="9199"
                   value={shift.Outbound}
+                  aria-label="Outbound-train-input"
                   onChange={(e) =>
                     handleChange(index, "Outbound", e.target.value)
                   }
@@ -85,6 +95,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                   min="9000"
                   max="9199"
                   value={shift.Inbound}
+                  aria-label="Inbound-train-input"
                   onChange={(e) =>
                     handleChange(index, "Inbound", e.target.value)
                   }
@@ -94,6 +105,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                 <input
                   className={hideInputs ? "hidden" : "switch"}
                   type="checkbox"
+                  aria-label="Overnight-switch-checkbox"
                   onChange={() => ovSwitch(index)}
                 ></input>
               </td>
@@ -102,6 +114,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                   name={`Position-${index}`}
                   type="radio"
                   value="FIRST"
+                  aria-label="First-class-position-checkbox"
                   onChange={(e) => handleChange(index, "Position", "FIRST")}
                 ></input>
               </td>
@@ -110,6 +123,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                   name={`Position-${index}`}
                   type="radio"
                   value="BAR"
+                  aria-label="Bar-position-checkbox"
                   onChange={(e) => handleChange(index, "Position", "BAR")}
                 ></input>
               </td>
@@ -118,6 +132,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                   name={`Position-${index}`}
                   type="radio"
                   value="PURSER"
+                  aria-label="Purser-position-checkbox"
                   onChange={(e) => handleChange(index, "Position", "PURSER")}
                 ></input>
               </td>
@@ -126,6 +141,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                 <input
                   type="checkbox"
                   checked={shift.Early}
+                  aria-label="Early-desired-checkbox"
                   onChange={(e) =>
                     handleChange(index, "Early", e.target.checked)
                   }
@@ -135,6 +151,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                 <input
                   type="checkbox"
                   checked={shift.Late}
+                  aria-label="Late-desired-checkbox"
                   onChange={(e) =>
                     handleChange(index, "Late", e.target.checked)
                   }
@@ -144,6 +161,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                 <input
                   type="checkbox"
                   checked={shift.LTA}
+                  aria-label="Long-turn-around-desired-checkbox"
                   onChange={(e) => handleChange(index, "LTA", e.target.checked)}
                 ></input>
               </td>
@@ -151,6 +169,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                 <input
                   type="checkbox"
                   checked={shift.DO}
+                  aria-label="Day-off-desired-checkbox"
                   onChange={(e) => handleChange(index, "DO", e.target.checked)}
                 ></input>
               </td>
@@ -158,6 +177,7 @@ export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
                 <input
                   type="text"
                   placeholder="Note"
+                  aria-label="Note-input"
                   onChange={(e) => handleChange(index, "Note", e.target.value)}
                 ></input>
               </td>
