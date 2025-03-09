@@ -1,5 +1,5 @@
 import { SwapDataItem } from "types";
-import { SwapsDisplay } from "./SwapsDisplay/SwapsDisplay";
+import { SwapsDisplay } from "components";
 import "styles/ViewBoxes.scss";
 
 export const ViewBox = ({

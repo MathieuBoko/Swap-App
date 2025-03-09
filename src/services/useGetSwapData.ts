@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { SwapDataItem } from "types";
 
-const useGetSwapData = (BASEURL: string) => {
+export const useGetSwapData = (BASEURL: string) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [swapData, setSwapData] = useState<SwapDataItem[]>();
   const [daysWithData, setDaysWithData] = useState<SwapDataItem[]>();
@@ -35,5 +35,3 @@ const useGetSwapData = (BASEURL: string) => {
 
   return { loading, swapData, daysWithData, daySwapData, getDaySwapData };
 };
-
-export default useGetSwapData;

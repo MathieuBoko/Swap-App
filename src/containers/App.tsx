@@ -1,11 +1,7 @@
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import InlineForm from "components/InlineForm/InlineForm";
-import { Calendar } from "components/Calendar";
-import Greetings from "components/Greetings";
-import { Copyright } from "components/Copyright";
-import Loader from "components/Loader";
-import useGetSwapData from "services/useGetSwapData";
+import { Calendar, Greetings, Copyright, Loader, InlineForm } from "components";
+import { useGetSwapData } from "services";
 import "styles/App.scss";
 
 const App = () => {

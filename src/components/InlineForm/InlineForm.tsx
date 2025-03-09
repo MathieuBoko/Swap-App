@@ -1,15 +1,13 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { tableSchema } from "constants/tableSchema";
-import { TableHead } from "components/Table/TableHead";
-import InlineFormBody from "./InlineFormBody";
-import { LinkedButtons } from "./LinkedButtons";
-import { postSwapData } from "services/postSwapData";
-import { isOutdated } from "utils/isOutdated";
+import { TableHead, InlineFormBody, LinkedButtons } from "components";
+import { postSwapData } from "services";
+import { isOutdated } from "utils";
 import { SwapDataItem } from "types";
 import "styles/InlineForm.scss";
 
-const InlineForm = ({
+export const InlineForm = ({
   BASEURL,
   todayDate,
 }: {
@@ -119,5 +117,3 @@ const InlineForm = ({
     </>
   );
 };
-
-export default InlineForm;

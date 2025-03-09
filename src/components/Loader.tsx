@@ -1,7 +1,1 @@
-import React from "react";
-
-const Loader: React.FC = () => {
-  return <div className="loading-spinner"></div>;
-};
-
-export default Loader;
+export const Loader = () => <div className="loading-spinner"></div>;

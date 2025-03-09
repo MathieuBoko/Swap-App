@@ -16,7 +16,9 @@ type InlineFormBodyProps = {
   changeHandlers: ChangeHandlers;
 };
 
-const InlineFormBody: React.FC<InlineFormBodyProps> = ({ changeHandlers }) => {
+export const InlineFormBody: React.FC<InlineFormBodyProps> = ({
+  changeHandlers,
+}) => {
   const { shifts, handleChange, addShift, deleteShift, ovSwitch } =
     changeHandlers;
 
@@ -166,5 +168,3 @@ const InlineFormBody: React.FC<InlineFormBodyProps> = ({ changeHandlers }) => {
     </>
   );
 };
-
-export default InlineFormBody;

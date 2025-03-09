@@ -5,7 +5,7 @@ type SearchBoxProps = {
   setSearch: (value: string) => void;
 };
 
-const SearchBox: React.FC<SearchBoxProps> = ({ search, setSearch }) => {
+export const SearchBox: React.FC<SearchBoxProps> = ({ search, setSearch }) => {
   return (
     <div style={{ marginBottom: "2px" }}>
       <input
@@ -17,5 +17,3 @@ const SearchBox: React.FC<SearchBoxProps> = ({ search, setSearch }) => {
     </div>
   );
 };
-
-export default SearchBox;

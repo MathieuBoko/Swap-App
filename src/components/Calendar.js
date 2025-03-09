@@ -7,8 +7,8 @@ import {
   eachDayOfInterval,
   isSameMonth,
 } from "date-fns";
-import { ViewBox } from "./ViewBox";
-import { isOutdated } from "utils/isOutdated";
+import { ViewBox } from "components";
+import { isOutdated } from "utils";
 import "styles/Calendar.scss";
 
 export const Calendar = ({
