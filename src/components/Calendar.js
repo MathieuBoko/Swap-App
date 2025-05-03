@@ -71,7 +71,7 @@ export const Calendar = ({
                     : null;
                   const weekDay = format(day, "EEEE");
                   const dayNumber = format(day, "d");
-                  const hasDate = daysWithData.includes(formatedDay);
+                  const hasDate = daysWithData?.includes(formatedDay);
 
                   return (
                     <div

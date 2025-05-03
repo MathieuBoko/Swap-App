@@ -7,6 +7,7 @@ export const useGetSwapData = (BASEURL: string) => {
   const [swapData, setSwapData] = useState<SwapDataItem[]>();
   const [daysWithData, setDaysWithData] = useState<SwapDataItem[]>();
   const [daySwapData, setDaySwapData] = useState<SwapDataItem[]>();
+  const [isDeprecated, setIsDeprecated] = useState<boolean>(false);
 
   useEffect(() => {
     fetch(`${BASEURL}/dbData`, {
@@ -15,13 +16,18 @@ export const useGetSwapData = (BASEURL: string) => {
     })
       .then((response) => response.json())
       .then(({ data }) => {
-        const daysWithData = data?.map((item: SwapDataItem) => item.Date);
-        setDaysWithData(daysWithData);
-        setSwapData(data);
-        setLoading(false);
+        if (data) {
+          const daysWithData = data.map((item: SwapDataItem) => item.Date);
+          setDaysWithData(daysWithData);
+          setSwapData(data);
+          setLoading(false);
+        } else {
+          setIsDeprecated(true);
+          setLoading(false);
+        }
       })
       .catch((error) => {
-        throw new Error("Failed to fetch Calendar Data:", error);
+        throw new Error(error);
       });
   }, [BASEURL]);
 
@@ -33,5 +39,12 @@ export const useGetSwapData = (BASEURL: string) => {
     setDaySwapData(daySwapData);
   };
 
-  return { loading, swapData, daysWithData, daySwapData, getDaySwapData };
+  return {
+    loading,
+    swapData,
+    daysWithData,
+    daySwapData,
+    getDaySwapData,
+    isDeprecated,
+  };
 };

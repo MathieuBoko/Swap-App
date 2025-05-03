@@ -6,6 +6,7 @@ jest.mock("services");
 
 const mockLoadingState = {
   loading: true,
+  isDeprecated: false,
   swapData: null,
   daysWithData: null,
   daySwapData: null,
@@ -14,9 +15,19 @@ const mockLoadingState = {
 
 const mockFetchedState = {
   loading: false,
+  isDeprecated: false,
   swapData: [],
   daysWithData: [],
   daySwapData: [],
+  getDaySwapData: jest.fn(),
+};
+
+const mockDeprecatedState = {
+  loading: false,
+  isDeprecated: true,
+  swapData: undefined,
+  daysWithData: undefined,
+  daySwapData: undefined,
   getDaySwapData: jest.fn(),
 };
 
@@ -88,6 +99,43 @@ describe("App.js", () => {
       const { container } = renderApp(mockFetchedState);
       const copyright = container.querySelector(".copyright");
       expect(copyright).toBeInTheDocument();
+    });
+  });
+
+  describe("When the swap data is UNDEFINED", () => {
+    it("should render NewsBox with the correct message", () => {
+      const { container } = renderApp(mockDeprecatedState);
+      const newsBox = container.querySelector(".newsBox");
+      expect(newsBox).toBeInTheDocument();
+    });
+
+    it("should NOT render Loader", () => {
+      const { container } = renderApp(mockDeprecatedState);
+      const loader = container.querySelector(".loading-spinner");
+      expect(loader).not.toBeInTheDocument();
+    });
+
+    it("should NOT render Calendar", () => {
+      const { container } = renderApp(mockDeprecatedState);
+      const calendar = container.querySelector(".calendar");
+      expect(calendar).not.toBeInTheDocument();
+    });
+    it("should NOT render Greetings", () => {
+      const { container } = renderApp(mockDeprecatedState);
+      const greetings = container.querySelector(".greetings");
+      expect(greetings).not.toBeInTheDocument();
+    });
+
+    it("should NOT render InlineForm", () => {
+      const { container } = renderApp(mockDeprecatedState);
+      const inlineForm = container.querySelector(".inlineForm");
+      expect(inlineForm).not.toBeInTheDocument();
+    });
+
+    it("should NOT render Copyright", () => {
+      const { container } = renderApp(mockDeprecatedState);
+      const copyright = container.querySelector(".copyright");
+      expect(copyright).not.toBeInTheDocument();
     });
   });
 });
