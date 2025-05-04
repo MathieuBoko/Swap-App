@@ -9,10 +9,11 @@ import {
   NewsBox,
 } from "components";
 import { useGetSwapData } from "services";
+import { appConstants } from "constants/appConstants";
 import "styles/App.scss";
 
 const App = () => {
-  const BASEURL = process.env.REACT_APP_SWAP_APP_URL || "";
+  const BASEURL = process.env.REACT_APP_SWAP_APP_URL || "http://localhost:3001";
 
   const todayDate = new Date();
 
@@ -25,12 +26,11 @@ const App = () => {
     isDeprecated,
   } = useGetSwapData(BASEURL);
 
-  const newsBoxMessage =
-    "Sorry, hosting and maintanance has a cost... This app is now deprecated. Thanks for using it!";
-
   switch (isDeprecated) {
     case true:
-      return <NewsBox newsBoxMessage={newsBoxMessage} />;
+      return (
+        <NewsBox newsBoxMessage={appConstants.NewsBox.appDeprecatedMessage} />
+      );
     case false:
       return (
         <>

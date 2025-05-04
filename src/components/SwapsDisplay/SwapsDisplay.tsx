@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { SwapDataItem } from "types";
-import { tableSchema } from "constants/tableSchema";
+import { appConstants } from "constants/appConstants";
 import { Table, SearchBox } from "components";
 import "styles/ViewBoxes.scss";
 
 export const SwapsDisplay = ({ swapData }: { swapData: SwapDataItem[] }) => {
   const [search, setSearch] = useState("");
-  const schema = tableSchema.SwapDisplay.tableContent;
+  const schema = appConstants.SwapDisplay.tableContent;
 
   return (
     <>

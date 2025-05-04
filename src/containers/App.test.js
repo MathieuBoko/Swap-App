@@ -31,7 +31,7 @@ const mockDeprecatedState = {
   getDaySwapData: jest.fn(),
 };
 
-describe("App.js", () => {
+describe("App", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });

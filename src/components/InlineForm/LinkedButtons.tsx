@@ -1,8 +1,8 @@
 import React from "react";
-import { tableSchema } from "constants/tableSchema";
+import { appConstants } from "constants/appConstants";
 
 export const LinkedButtons: React.FC = () => {
-  const buttons = tableSchema.InlineForm.buttons;
+  const buttons = appConstants.InlineForm.buttons;
 
   return (
     <div className="linked-button-grid">

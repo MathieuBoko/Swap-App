@@ -1,4 +1,7 @@
-export const tableSchema = {
+export const appConstants = {
+  Greetings: {
+    message: (date: string) => `Hi there! Today is ${date}`,
+  },
   InlineForm: {
     tableContent: [
       { name: "SHIFT" },
@@ -101,5 +104,11 @@ export const tableSchema = {
       { name: "Note", className: "FOR" },
       { name: "Sent" },
     ],
+  },
+  NewsBox: {
+    appUpdateMessage: "",
+    appDeprecatedMessage:
+      "Sorry, hosting and maintanance has a cost... This app is now deprecated. Thanks for using it!",
+    buttonLabel: "Last update",
   },
 };

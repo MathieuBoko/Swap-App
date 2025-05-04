@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
-import { tableSchema } from "constants/tableSchema";
+import { appConstants } from "constants/appConstants";
 import { TableHead, InlineFormBody, LinkedButtons } from "components";
 import { postSwapData } from "services";
 import { isOutdated } from "utils";
@@ -95,7 +95,7 @@ export const InlineForm = ({
               <TableHead
                 swapData={[]}
                 search={""}
-                schema={tableSchema.InlineForm.tableContent}
+                schema={appConstants.InlineForm.tableContent}
               />
               <InlineFormBody
                 changeHandlers={{
