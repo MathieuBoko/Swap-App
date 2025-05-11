@@ -52,22 +52,22 @@ describe("App", () => {
       const calendar = container.querySelector(".calendar");
       expect(calendar).not.toBeInTheDocument();
     });
-    it("should render Greetings", () => {
+    it("should NOT render Greetings", () => {
       const { container } = renderApp(mockLoadingState);
       const greetings = container.querySelector(".greetings");
-      expect(greetings).toBeInTheDocument();
+      expect(greetings).not.toBeInTheDocument();
     });
 
-    it("should render InlineForm", () => {
+    it("should NOT render InlineForm", () => {
       const { container } = renderApp(mockLoadingState);
       const inlineForm = container.querySelector(".inlineForm");
-      expect(inlineForm).toBeInTheDocument();
+      expect(inlineForm).not.toBeInTheDocument();
     });
 
-    it("should render Copyright", () => {
+    it("should NOT render Copyright", () => {
       const { container } = renderApp(mockLoadingState);
       const copyright = container.querySelector(".copyright");
-      expect(copyright).toBeInTheDocument();
+      expect(copyright).not.toBeInTheDocument();
     });
   });
 

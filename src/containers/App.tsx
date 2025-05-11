@@ -34,20 +34,22 @@ const App = () => {
     case false:
       return (
         <>
-          <Greetings todayDate={todayDate} />
-          <InlineForm BASEURL={BASEURL} todayDate={todayDate} />
           {loading ? (
             <Loader />
           ) : (
-            <Calendar
-              todayDate={todayDate}
-              swapData={swapData}
-              daysWithData={daysWithData}
-              daySwapData={daySwapData}
-              getDaySwapData={getDaySwapData}
-            />
+            <>
+              <Greetings todayDate={todayDate} />
+              <InlineForm BASEURL={BASEURL} todayDate={todayDate} />
+              <Calendar
+                todayDate={todayDate}
+                swapData={swapData}
+                daysWithData={daysWithData}
+                daySwapData={daySwapData}
+                getDaySwapData={getDaySwapData}
+              />
+              <Copyright todayDate={todayDate} />
+            </>
           )}
-          <Copyright todayDate={todayDate} />
           <ToastContainer />
         </>
       );
