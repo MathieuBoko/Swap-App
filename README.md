@@ -1,6 +1,50 @@
 # Swap App
 
-Branches:
+A user-facing web application built to interact with [Swap App Server](https://github.com/MathieuBoko/Swap-App-Server).  
+Provides a smooth interface for managing and viewing related data.
+
+## Features
+
+- Responsive and accessible UI
+- Integration with Swap App Server via REST API
+- Component-based architecture using React
+
+## Project Structure
+
+```
+swap-app/
+├── public/
+├── src/
+│   ├── components/
+│   ├── constants/
+│   ├── containers/
+│   ├── services/
+│   ├── styles/
+│   ├── utils/
+│   ├── index.tsx
+│   └── types.ts
+├── package.json
+└── README.md
+```
+
+## Setup
+
+```bash
+npm i
+```
+
+# Start the server
+
+```bash
+npm start
+```
+
+# API Integration
+
+Make sure the [Swap App Server](https://github.com/MathieuBoko/Swap-App-Server) is running at the expected base URL.
+Update the API endpoint in your environment variables or config as needed.
+
+# Branches:
 
 - 3.08.2024 > Update 7: https://github.com/MathieuBoko/swap-app/tree/3.08.2024
 
