@@ -108,7 +108,7 @@ export const appConstants = {
   NewsBox: {
     appUpdateMessage: "",
     appDeprecatedMessage:
-      "Sorry, hosting and maintanance has a cost... This app is now deprecated. Thanks for using it!",
+      "Sorry, hosting and maintenance come with a cost… This app is now deprecated. Thanks for using it!",
     buttonLabel: "Last update",
   },
 };
